@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grades</title>
+</head>
+<body>
+<table>
+    <tr valign="baseline">
+        <td>
+            <ul><li><a href="/2023/public/kanbas/profile/profile-navigation.html">Account</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="/2023/public/kanbas/kanbas-navigation.html">Courses</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Inbox</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Studio</a></li>
+                <li><a href="#">Commons</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </td>
+        <td>
+            <ul><li><a href="/2023/public/kanbas/home.html">Home</a></li>
+                <li><a href="#">Modules</a></li>
+                <li><a href="#">Piazza</a></li>
+                <li><a href="#">Zoom Meetings</a></li>
+                <li><a href="/2023/public/kanbas/assignments/index.html">Assignments</a></li>
+                <li><a href="#">Quizzes</a></li>
+                <li><a href="#">Grades</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Panopto Video</a></li>
+                <li><a href="#">Discussions</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Files</a></li>
+                <li><a href="#">Rubrics</a></li>
+                <li><a href="#">Outcomes</a></li>
+                <li><a href="#">Collaborations</a></li>
+                <li><a href="#">Syllabus</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        <td>
+        <select id="">
+            <option selected value = "Grade" >
+                Gradebook
+            </option>
+        </select>
+        <button type = "button">Import</button>
+        <select id="EXPORT">
+            <option selected value = "Export" >
+                Export
+            </option>
+        </select>
+        <button type = "button">Configure</button>
+        <h3>Student Names</h3>
+        <input
+                type="text"
+                placeholder="Search Students"
+                title="Type the usernames of students you want to filter"
+        />
+        <h3>Assignment Names</h3>
+        <input
+                type = "text"
+                placeholder="Search Assignments"
+                title =""
+        />
+        <br />
+        <br />
+        <button type = "button">Apply Filters</button>
+        <br />
+        <br />
+        <table width="100%" border="1">
+            <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>A1</th>
+                <th>A2</th>
+                <th>A3</th>
+                <th>A4</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Kevin Yang</td>
+                <td>100%</td>
+                <td><label for="text-fields"></label>
+                    <input type="text" id="text-fields"
+                           placeholder="" value="97%"/></td>
+                <td>51%</td>
+                <td>100%</td>
+            </tr>
+            <tr>
+                <td>Kevin Yang</td>
+                <td>100%</td>
+                <td><label for="text-fields"></label>
+                    <input type="text" id="text-field"
+                           placeholder="" value="97%"/></td>
+                <td>100%</td>
+                <td>100%</td>
+            </tr>
+            <tr>
+                <td>Kevin Yang</td>
+                <td>49%</td>
+                <td>100%</td>
+                <td><label for="text-fields"></label>
+                    <input type="text" id="text"
+                           placeholder="" value="97%"/></td>
+                <td>100%</td>
+            </tr>
+            <tr>
+                <td>Kevin Yang</td>
+                <td>10%</td>
+                <td>100%</td>
+                <td>95%</td>
+                <td>100%</td>
+            </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+    </td>
+    </tr>
+</table>
+</body>
+</html>
