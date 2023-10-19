@@ -1,0 +1,36 @@
+.wd-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    max-width: 300px;
+}
+
+.card-img-top {
+    max-width: 100%;
+    height: auto;
+}
+
+.card-title h5{
+    color: #2596be;
+    font-size: 15px;
+    margin: 0;
+}
+
+.card-text {
+    font-size: 15px;
+    margin: 0;
+}
+
+.card-text span {
+    font-size: 10px;
+    display: block;
+}
+
+.card a {
+    text-decoration: none;
+    color: initial;
+}

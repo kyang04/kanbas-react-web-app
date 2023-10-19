@@ -1,0 +1,16 @@
+.wd-course-navigation {
+    border-radius: 0px;
+    border: none;
+}
+
+.wd-course-navigation a {
+    color: red;
+    border-radius: 0px;
+    border: none;
+}
+
+.wd-course-navigation a.active {
+    background-color: white;
+    border-left: 2px solid black;
+    color: black;
+}
