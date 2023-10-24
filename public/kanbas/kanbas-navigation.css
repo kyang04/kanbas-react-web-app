@@ -1,0 +1,62 @@
+.kanbas .list-group-item {
+    background-color: black;
+    color: white;
+    font-size: smaller;
+    width: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.list-group-item.active {
+    color: red;
+    background-color: white;
+    border: none;
+
+}
+.white-icon {
+    color: wheat;
+}
+
+.red-icon {
+    color: red;
+}
+
+.black-item {
+    color: black;
+    border: none;
+    border-left: 2px solid black;
+    text-decoration: none;
+    margin-left: 20px;
+    padding-left: 10px;
+    width: 200px;
+
+}
+.red-item {
+    color: red;
+    border: none;
+    text-decoration: none;
+    margin-left: 20px;
+    padding-left: 10px;
+    width: 200px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.wd-card-container .col{
+    width: 250px;
+}
+
+.color-title .card-title {
+    color: #2596be;
+}
+
+.module .list-group-item {
+    padding-bottom: 10px;
+    font-weight: bold;
+}
