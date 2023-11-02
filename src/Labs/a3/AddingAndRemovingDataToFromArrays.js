@@ -12,6 +12,7 @@ function AddingAndRemovingDataToFromArrays() {
             <h3>Add and remove data to arrays</h3>
             numberArray1 = {numberArray1} <br/>
             stringarray1 = {stringArray1} <br/>
+            
         </>
     
 )

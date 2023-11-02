@@ -8,9 +8,9 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiGlasses } from "react-icons/bi"
 
-function Courses() {
+function Courses({ courses }) {
     const { courseId } = useParams();
-    const course = db.courses.find((course) => course._id === courseId);
+    const course = courses.find((course) => course._id === courseId);
     const links = ["Home", "Modules", "Assignments", "Grades"];
     const { pathname } = useLocation();
     const activeLink = links.find((link) => pathname.includes(link));
