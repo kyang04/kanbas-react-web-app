@@ -1,9 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import db from "../../Database";
 
 
 const initialState = {
-    modules: db.modules,
+    modules: [],
     module: { name: "New Module 123", description: "New Description" },
 };
 
@@ -32,14 +31,18 @@ const modulesSlice = createSlice({
                 }
             });
         },
+        setModules: (state, action) => {
+            state.modules = action.payload;
+        },
         setModule: (state, action) => {
             state.module = action.payload;
         },
+
     },
 });
 
 
 export const { addModule, deleteModule,
-    updateModule, setModule } = modulesSlice.actions;
+    updateModule, setModules, setModule } = modulesSlice.actions;
 export default modulesSlice.reducer;
 

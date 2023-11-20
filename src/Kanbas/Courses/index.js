@@ -7,10 +7,23 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiGlasses } from "react-icons/bi"
+import { useState, useEffect } from "react";
+import axios from "axios";
+import * as service from "../service";
 
 function Courses({ courses }) {
     const { courseId } = useParams();
-    const course = courses.find((course) => course._id === courseId);
+    const [course, setCourse] = useState({});
+    const fetchCourseById = async (courseId) => {
+        const course = await service.fetchCourseById(courseId);
+        setCourse(course);
+    };
+
+    useEffect(() => {
+        fetchCourseById(courseId);
+    }, [courseId]);
+
+
     const links = ["Home", "Modules", "Assignments", "Grades"];
     const { pathname } = useLocation();
     const activeLink = links.find((link) => pathname.includes(link));
