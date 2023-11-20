@@ -25,11 +25,15 @@ function Kanbas() {
         name: "New Course",      number: "New Number",
         startDate: "2023-09-10", endDate: "2023-12-15",
     });
-    const addNewCourse = async () => {
+    const addCourse = async () => {
         const response = await axios.post(URL, course);
-        setCourses([response.data, ...courses]);
+        setCourses([
+            response.data,
+            ...courses,
+        ]);
         setCourse({ name: "" });
     };
+
     const deleteCourse = async (course) => {
         const response = await axios.delete(
             `${URL}/${course._id}`
@@ -56,7 +60,6 @@ function Kanbas() {
     };
 
 
-
     return (
         <Provider store={store}>
         <div className="d-flex">
@@ -70,7 +73,7 @@ function Kanbas() {
                             courses={courses}
                             course={course}
                             setCourse={setCourse}
-                            addNewCourse={addNewCourse}
+                            addCourse={addCourse}
                             deleteCourse={deleteCourse}
                             updateCourse={updateCourse}/>
                     } />

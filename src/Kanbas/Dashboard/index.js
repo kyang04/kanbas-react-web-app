@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import db from "../Database";
 import "./index.css"
 import backgroundImage from "./bright-blue-color-solid-background-1920x1080.png";
-function Dashboard({ courses, course, setCourse, addNewCourse,
+function Dashboard({ courses, course, setCourse, addCourse,
                        deleteCourse, updateCourse
 }) {
 
@@ -21,7 +21,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
                    onChange={(e) => setCourse({ ...course, startDate: e.target.value }) }/>
             <input value={course.endDate} className="form-control" type="date"
                    onChange={(e) => setCourse({ ...course, endDate: e.target.value }) } />
-            <button onClick={addNewCourse} className="btn btn-success">
+            <button onClick={addCourse} className="btn btn-success">
                 Add
             </button>
             <button onClick={updateCourse} className="btn btn-primary">

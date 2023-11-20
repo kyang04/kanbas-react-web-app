@@ -11,17 +11,20 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import * as service from "../service";
 
-function Courses({ courses }) {
+function Courses() {
     const { courseId } = useParams();
+    const URL = "http://localhost:4000/api/courses";
     const [course, setCourse] = useState({});
-    const fetchCourseById = async (courseId) => {
-        const course = await service.fetchCourseById(courseId);
-        setCourse(course);
+    const findCourseById = async (courseId) => {
+        const response = await axios.get(
+            `${URL}/${courseId}`
+        );
+        setCourse(response.data);
     };
-
     useEffect(() => {
-        fetchCourseById(courseId);
+        findCourseById(courseId);
     }, [courseId]);
+
 
 
     const links = ["Home", "Modules", "Assignments", "Grades"];
