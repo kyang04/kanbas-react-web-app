@@ -1,36 +1,30 @@
 import axios from "axios";
-
-export const fetchCourses = async () => {
-    const response = await axios.get("http://localhost:4000/api/courses");
+const COURSES_URL = "http://localhost:4000/api/courses";
+const API_BASE = process.env.REACT_APP_API_BASE;
+const MODULES_URL = `${API_BASE}/modules`;
+export const deleteModule = async (moduleId) => {
+    const response = await axios
+        .delete(`${MODULES_URL}/${moduleId}`);
     return response.data;
 };
 
-export const deleteCourse = async (course) => {
-    const response = await axios.delete(
-        `http://localhost:4000/api/courses/${course._id}`
-    );
-    return response.data;
-};
-
-export const addCourse = async (course) => {
+export const createModule = async (courseId, module) => {
     const response = await axios.post(
-        "http://localhost:4000/api/courses",
-        course
+        `${COURSES_URL}/${courseId}/modules`,
+        module
     );
     return response.data;
 };
 
-export const updateCourse = async (course) => {
-    const response = await axios.put(
-        `http://localhost:4000/api/courses/${course._id}`,
-        course
-    );
+export const findModulesForCourse = async (courseId) => {
+    const response = await axios
+        .get(`${COURSES_URL}/${courseId}/modules`);
     return response.data;
 };
 
-export const fetchCourseById = async (courseId) => {
-    const response = await axios.get(
-        `http://localhost:4000/api/courses/${courseId}`
-    );
+export const updateModule = async (module) => {
+    const response = await axios.
+    put(`${MODULES_URL}/${module._id}`, module);
     return response.data;
 };
+
