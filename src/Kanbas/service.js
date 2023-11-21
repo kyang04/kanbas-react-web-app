@@ -1,28 +1,28 @@
 import axios from "axios";
 
+const API_BASE = process.env.REACT_APP_API_BASE;
 export const fetchCourses = async () => {
-    const response = await axios.get("http://localhost:4000/api/courses");
+    const response = await axios.get(`${API_BASE}/api/courses`);
     return response.data;
 };
 
 export const deleteCourse = async (course) => {
-    const response = await axios.delete(
-        `http://localhost:4000/api/courses/${course._id}`
-    );
+    const response = await axios.delete(`${API_BASE}/api/courses/${course._id}`);
     return response.data;
 };
 
+
 export const addCourse = async (course) => {
     const response = await axios.post(
-        "http://localhost:4000/api/courses",
-        course
+        `${API_BASE}/api/courses`, course
     );
+
     return response.data;
 };
 
 export const updateCourse = async (course) => {
     const response = await axios.put(
-        `http://localhost:4000/api/courses/${course._id}`,
+        `${API_BASE}/api/courses/${course._id}`,
         course
     );
     return response.data;
@@ -30,7 +30,7 @@ export const updateCourse = async (course) => {
 
 export const fetchCourseById = async (courseId) => {
     const response = await axios.get(
-        `http://localhost:4000/api/courses/${courseId}`
+        `${API_BASE}/api/courses/${courseId}`
     );
     return response.data;
 };
